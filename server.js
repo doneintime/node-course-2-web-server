@@ -26,18 +26,15 @@ app.get('/about', (req, res) => {
     res.render('about.hbs');
 })
 
-app.get('/bad', (req, res) => {
-    res.send({
-        errorMessage: 'Unable to handle request'
-    })
+app.get('/projects', (req, res)=>{
+    res.render('projects', {
+        projects: "Projects"
+    });
 })
+
 
 app.get('/help', (req, res) => {
-    res.render('help.hbs');
-})
-
-app.get('/second', (req, res)=>{
-    res.render('second.hbs');
+    res.render('../public/help');
 })
 
 app.listen(port, ()=>{
