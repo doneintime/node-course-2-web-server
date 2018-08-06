@@ -36,6 +36,10 @@ app.get('/help', (req, res) => {
     res.render('help.hbs');
 })
 
+app.get('/second', (req, res)=>{
+    res.render('second.hbs');
+})
+
 app.listen(port, ()=>{
     console.log(`App started on port ${port}`);
 });
